@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GirisYapActivity">
+
+    <Button
+        android:id="@+id/btnGiris"
+        android:layout_width="252dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="30dp"
+        android:text="Giriş Yap"
+        android:backgroundTint="@color/ozel1"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3Giris"
+        app:layout_constraintEnd_toStartOf="@+id/txtKaydolGiris"
+        app:layout_constraintStart_toStartOf="@+id/txtKaydolGiris" />
+
+
+    <TextView
+        android:id="@+id/textView3Giris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:text="Hesabınız yok mu?"
+        android:textColor="#1C1B1B"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtKaydolGiris"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtKaydolGiris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="105dp"
+        android:text="Kaydol"
+        android:textColor="#131313"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textView3Giris"
+        app:layout_constraintTop_toBottomOf="@+id/btnGiris" />
+
+    <TextView
+        android:id="@+id/textView12Giris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="6dp"
+        android:text="Online Berber Randevu Sistemi"
+        android:textColor="#1C1B1B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLogoGiris"
+        android:layout_width="128dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView10Giris"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/berberlogo" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView8Giris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#1C1B1B"
+            app:layout_column="0"
+            app:layout_row="8" />
+
+        <TextView
+            android:id="@+id/textView7Giris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kullanıcı Adı"
+            android:textColor="#1C1B1B"
+            app:layout_column="0"
+            app:layout_row="6" />
+
+        <TextView
+            android:id="@+id/textView9Giris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Şifre"
+            android:textColor="#1C1B1B"
+            app:layout_column="0"
+            app:layout_row="9" />
+
+        <EditText
+            android:id="@+id/edtkuladi_giris"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_column="0"
+            app:layout_row="7" />
+
+        <EditText
+            android:id="@+id/edtSifre_giris"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="..."
+            android:inputType="textPassword"
+            app:layout_column="0"
+            app:layout_row="10" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/textView10Giris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Randevu"
+        android:textColor="#232323"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView11Giris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11Giris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="66dp"
+        android:text="Giriş yap"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView10Giris"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cboxGirisHatirla"
+        android:layout_width="127dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="35dp"
+        android:text="Beni hatırla  "
+        app:layout_constraintBottom_toTopOf="@+id/btnGiris"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

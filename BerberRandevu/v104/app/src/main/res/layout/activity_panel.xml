@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ozel2"
+    tools:context=".PanelActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="693dp"
+        android:id="@+id/panelBaslikLayout"
+        android:background="@color/ozel1">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="BERBER MİSİN?"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/panelKullaniciAdi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#E6DFDF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/panelProfilFoto"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/panelProfilFoto"
+            app:layout_constraintTop_toBottomOf="@+id/panelProfilFoto"
+            app:layout_constraintVertical_bias="0.36" />
+
+        <ImageView
+            android:id="@+id/panelProfilFoto"
+            android:layout_width="110dp"
+            android:layout_height="90dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintStart_toEndOf="@+id/checkBox"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3"
+            app:srcCompat="@drawable/defaultkaydol" />
+
+        <ImageView
+            android:id="@+id/panelGeribtn"
+            android:layout_width="65dp"
+            android:layout_height="48dp"
+            app:layout_constraintEnd_toEndOf="@+id/checkBox"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_geri" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridPanel"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_below="@+id/panelBaslikLayout"
+        android:layout_marginTop="0dp"
+        android:background="@color/ozel2"
+        android:padding="5dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="144dp">
+
+        <EditText
+            android:id="@+id/panelEdtBerberAdi"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:hint="BERBER ADI"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+
+        <TextView
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Açılış Saati"
+            app:layout_column="0"
+            app:layout_row="1"/>
+        <TextView
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Kapanış Saati"
+            app:layout_column="1"
+            app:layout_row="1"/>
+        <TimePicker
+            android:id="@+id/panelTpAcilis"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:timePickerMode="spinner"
+            app:layout_column="0"
+            app:layout_row="2"
+            />
+
+        <TimePicker
+            android:id="@+id/panelTpKapanis"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:timePickerMode="spinner"
+            app:layout_column="1"
+            app:layout_row="2"
+            />
+        <TextView
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Periyot Aralığı"
+            app:layout_column="0"
+            app:layout_row="3"/>
+        <TextView
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Telefon"
+            app:layout_column="1"
+            app:layout_row="3"/>
+        <EditText
+            android:id="@+id/panelEdtPeriyot"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:layout_column="0"
+            android:hint="DAKİKA(örn: 45)"
+            app:layout_row="4" />
+
+        <EditText
+            android:id="@+id/panelEdtTelefon"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="555 555 55 55"
+            android:inputType="phone"
+            app:layout_column="1"
+            app:layout_row="4" />
+        <TextView
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="il"
+            app:layout_column="0"
+            app:layout_row="5"/>
+        <TextView
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="İlçe"
+            app:layout_column="1"
+            app:layout_row="5"/>
+        <Spinner
+            android:id="@+id/panelSpnrIl"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:autofillHints="İL"
+            app:layout_column="0"
+            app:layout_row="6"/>
+        <Spinner
+            android:id="@+id/panelSpnrIlce"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:autofillHints="İL"
+            app:layout_column="1"
+            app:layout_row="6"/>
+        <TextView
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Adres Detay"
+            app:layout_column="0"
+            app:layout_row="7"/>
+
+        <EditText
+            android:id="@+id/panelEdtDetay"
+            android:layout_width="200dp"
+            android:layout_height="130dp"
+            app:layout_column="0"
+            app:layout_row="8"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_row="8"
+            app:layout_column="1"
+            android:src="@drawable/islemekle"
+            android:id="@+id/panelImgİslemEkle"/>
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/ozel2"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="693dp"
+        android:layout_below="@+id/gridPanel"
+        >
+
+        <Button
+            android:id="@+id/panelBtnKaydet"
+            android:layout_width="137dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/ozel1"
+            android:text="KAYDET"
+            app:icon="@drawable/ic_ayarlarnav"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

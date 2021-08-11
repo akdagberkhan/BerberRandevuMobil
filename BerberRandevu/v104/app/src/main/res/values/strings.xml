@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">onlineBerber</string>
+    <string name="navigation_drawer_ac">Menüyü göster</string>
+    <string name="navigation_drawer_kapat">Menüyü gizle</string>
+</resources>

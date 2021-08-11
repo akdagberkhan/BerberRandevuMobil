@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/lnlayout">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:id="@+id/berberImg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/defaultkaydol" />
+
+            <TextView
+                android:id="@+id/berberAdiTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Berber Adı"
+                app:layout_constraintStart_toEndOf="@+id/berberImg"
+                app:layout_constraintTop_toTopOf="@+id/berberImg" />
+
+            <TextView
+                android:id="@+id/berberKullaniciAdiTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Ad"
+                app:layout_constraintStart_toStartOf="@+id/berberAdiTxt"
+                app:layout_constraintTop_toBottomOf="@+id/berberAdiTxt" />
+
+            <TextView
+                android:id="@+id/berberTelefonTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Telefon"
+                app:layout_constraintStart_toStartOf="@+id/berberKullaniciAdiTxt"
+                app:layout_constraintTop_toBottomOf="@+id/berberKullaniciAdiTxt" />
+
+            <TextView
+                android:id="@+id/berberAdresTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Adres"
+                app:layout_constraintStart_toStartOf="@+id/berberTelefonTxt"
+                app:layout_constraintTop_toBottomOf="@+id/berberTelefonTxt" />
+
+            <Button
+                android:id="@+id/berberRandevuBtn"
+                android:layout_width="99dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="10dp"
+                android:text="Randevu Al"
+                android:textSize="12dp"
+                android:backgroundTint="@color/ozel1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/ozel3"
+        android:layout_below="@+id/lnlayout"
+        />
+</RelativeLayout>

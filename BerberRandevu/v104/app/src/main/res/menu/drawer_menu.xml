@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_anasayfa"
+            android:icon="@drawable/ic_anasayfanav"
+            android:title="Anasayfa" />
+        <item
+            android:id="@+id/nav_berberler"
+            android:icon="@drawable/ic_berberlernav"
+            android:title="Berberler" />
+        <item
+            android:id="@+id/nav_randevular"
+            android:icon="@drawable/ic_randevularnav"
+            android:title="Randevu" />
+        <item
+            android:id="@+id/nav_hakkimizda"
+            android:icon="@drawable/ic_hakkimizdanav"
+            android:title="Hakkımızda" />
+        <item
+            android:id="@+id/nav_iletisim"
+            android:icon="@drawable/ic_iletisimnav"
+            android:title="İletişim" />
+    </group>
+    <item android:title="Hesap">
+        <menu>
+            <item
+                android:id="@+id/nav_profil"
+                android:icon="@drawable/ic_profilnav"
+                android:title="Profil" />
+            <item
+                android:id="@+id/nav_ayarlar"
+                android:icon="@drawable/ic_ayarlarnav"
+                android:title="Ayarlar" />
+            <item
+                android:id="@+id/nav_cikis"
+                android:icon="@drawable/ic_exitnav"
+                android:title="Çıkış" />
+        </menu>
+    </item>
+</menu>
